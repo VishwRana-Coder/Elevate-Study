@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Providers } from "./providers";
-import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -19,16 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html
-        lang="en"
-        suppressHydrationWarning
-        className={inter.variable}
-      >
-        <body className="font-sans min-h-screen">
-          <Providers>{children}</Providers>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className={inter.variable}>
+      <body className="font-sans min-h-screen">
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   );
 }

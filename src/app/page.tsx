@@ -245,7 +245,7 @@ export default function LandingPage() {
 
           {!isSignedIn ? (
             <div className="flex items-center gap-3">
-              <SignInButton mode="modal">
+              <SignInButton mode="modal" >
                 <button className="px-4 py-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] hover:bg-[var(--hover)] transition-colors text-sm font-medium">
                   Login
                 </button>
