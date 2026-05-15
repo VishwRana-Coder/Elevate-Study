@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* =========================
+   LIGHT MODE (Focused Indigo)
+========================= */
+:root {
+  /* Base */
+  --background: #ffffff;
+  --foreground: #1e1b4b;
+
+  /* Cards / surfaces */
+  --surface: #eef2ff;
+  --surface-secondary: #f8fafc;
+
+  /* Borders */
+  --border: #adadad;
+
+  /* Brand colors */
+  --primary: #4f46e5;
+  --accent: #7c3aed;
+
+  /* Status */
+  --success: #10b981;
+  --warning: #f59e0b;
+
+  /* Sidebar/Navbar */
+  --sidebar: #4338ca;
+
+  /* Hover */
+  --hover: #e0e7ff;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  /* Base */
+  --background: #09090b;
+  --foreground: #f8fafc;
+
+  /* Cards */
+  --surface: #18181b;
+  --surface-secondary: #27272a;
+
+  /* Borders */
+  --border: #3f3f46;
+
+  /* Brand */
+  --primary: #6366f1;
+  --accent: #8b5cf6;
+
+  /* Status */
+  --success: #34d399;
+  --warning: #fbbf24;
+
+  /* Sidebar/Navbar */
+  --sidebar: #312e81;
+
+  /* Hover */
+  --hover: #27272a;
+}
+
+
+/* =========================
+   Global styles
+========================= */
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-inter);
+}
+
+
+/* Utility reusable classes */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.accent-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.success-badge {
+  background: var(--success);
+  color: white;
+}
+
+.warning-badge {
+  background: var(--warning);
+  color: white;
+}
