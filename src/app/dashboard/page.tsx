@@ -1,6 +1,6 @@
 "use client";
 
-import { useUser, SignOutButton, UserButton } from "@clerk/nextjs";
+import { useUser, UserButton } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -16,7 +16,7 @@ export default function DashboardPage() {
 
   if (!isLoaded || !user) return null;
 
-  const name = user.fullName || user.firstName || "User";
+  const name = user.fullName || user.username || "User";
   const email = user.primaryEmailAddress?.emailAddress;
 
   return (
