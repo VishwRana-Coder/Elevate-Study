@@ -8,7 +8,6 @@ import {
   UserButton,
   useUser,
 } from "@clerk/nextjs";
-
 import { useRouter } from "next/navigation";
 
 // ── Types ────────────────────────────────────────────────────────
@@ -289,16 +288,16 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               id="get-started"
-              href="#features"
+              href="/user-info"
               className="primary-btn w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-base hover:opacity-90 transition-opacity shadow-lg shadow-[var(--primary)]/25"
             >
-              Start for Free →
+              Start without Login →
             </a>
             <a
-              href="#tools"
+              href="/dashboard"
               className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-base border border-[var(--border)] bg-[var(--surface)] hover:bg-[var(--hover)] transition-colors"
             >
-              Explore Tools
+              Dashboard →
             </a>
           </div>
         </div>
